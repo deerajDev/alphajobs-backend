@@ -19,6 +19,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'related_admin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -34,6 +35,7 @@ INSTALLED_APPS = [
     #TODO: ADD COMMAS AFTER THE APP
     #My apps 
     'accounts',
+    'jobs',
 ]
 
 MIDDLEWARE = [
