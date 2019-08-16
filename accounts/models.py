@@ -36,9 +36,11 @@ class UserManager(BaseUserManager):
 
 class User(AbstractUser):
     """User model."""
-
     username = None
     email = models.EmailField(_('email address'), unique=True)
+    user_work_ratings = models.IntegerField(default=0)
+    user_pay_ratings = models.IntegerField(default=0)
+
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []

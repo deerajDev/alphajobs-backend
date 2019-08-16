@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     #'third party apps 
     'rest_framework',
     'knox',
+    'django_rest_passwordreset',
 
     #FIXME: rest_framework.authtoken is not set 
     #TODO: ADD COMMAS AFTER THE APP
@@ -123,15 +124,9 @@ AUTH_USER_MODEL = 'accounts.User'
 
 
 #DRF SETTINGS 
+#FIXME: defaul permission class is not set
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
+       'rest_framework.authentication.TokenAuthentication',
     ]
-}
-
-
-#FIXME: PERMISSION CLASSSES ARE NOT SET
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES' : 'rest_framework.authentication.TokenAuthentication',
 }
