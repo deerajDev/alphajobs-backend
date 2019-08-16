@@ -28,4 +28,5 @@ class Job(models.Model):
 
 
 
-    
+class CityJobs(models.Model):
+  nearest_job = models.ForeignKey('Job', related_name='city_jobs', on_delete=models.CASCADE)
